@@ -27,7 +27,7 @@ export default function Categories() {
                     </div>
                 </div>
             </div>
-            <div className='flex'>
+            <div className=' flex border border-red-600  overflow-hidden'>
                 {
                     categories.map(
 
