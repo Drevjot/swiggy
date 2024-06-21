@@ -16,11 +16,11 @@ export default function Categories()
         fetchCategories();
     }, []);
 
-    const nextslide() => {
+    const nextslide = () => {
         setslide(slide + 3);
 
     }
-    const prevslide() => {
+    const prevslide = () => {
         setslide(slide-3);
     }
 
