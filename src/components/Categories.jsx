@@ -35,6 +35,21 @@ export default function Categories() {
                     </div>
                 ))}
             </div>
+            <div className='flex'>
+                {
+                    categories.map(
+
+                        (cat,index)=>{
+                            return(
+                                <div className='w-[150px] shrink-0'>
+                                    <img src={"./images/"+cat.image} alt="" />
+                                </div>
+                            )
+                        }
+                    )
+                }
+
+            </div>
         </div>
     );
 }
