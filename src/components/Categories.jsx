@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
+import TopRest from './TopRest';
 
 export default function Categories()
  {
@@ -17,16 +18,18 @@ export default function Categories()
     }, []);
 
     const nextslide = () => {
+        if(categories.length - 8 === slide) return;
         setslide(slide + 3);
 
     }
     const prevslide = () => {
+        if(slide === 0) return false;
         setslide(slide-3);
     }
 
     return (
         <div className='max-w-[1200px] mx-auto items-center'>
-            <div className='flex items-center justify-between'>
+            <div className='flex items-center justify-between mt-3'>
                 <div className='text-[25px] font-bold'>What's on your mind?</div>
                 <div className='flex'>
                     <div className='cursor-pointer flex justify-center items-center w-[30px] h-[30px] bg-[#e2e2e7] rounded-full mx-2  onClick={prevslide}'>
@@ -37,7 +40,8 @@ export default function Categories()
                     </div>
                 </div>
             </div>
-            <div className=' flex border border-red-600  overflow-hidden'>
+          
+            <div className=' flex overflow-hidden'>
                 {
                     categories.map(
 
@@ -54,6 +58,8 @@ export default function Categories()
                 }
 
             </div>
+            <hr className='my-6 border-[1px]' />
+            
         </div>
     );
 }

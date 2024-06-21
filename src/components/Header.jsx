@@ -45,7 +45,8 @@ export default function Header() {
     <>
     <div className='black-overlay w-full h-full fixed duration-500 ' onClick={hidesidemenu} style={{
         opacity : toggle ? 1: 0,
-        visibility : toggle ?  "visible":"hidden"
+        visibility : toggle ?  "visible":"hidden",
+        zIndex: 9999999999
     }}>
 
         <div onClick={(e)=>{
@@ -55,7 +56,7 @@ export default function Header() {
             left:toggle? '0%' : '-100%'
         }}></div>
     </div>
-<header className='p-[15px] shadow-xl'>
+<header className='p-[15px] shadow-xl sticky top-0 bg-white z-[99]'>
 <div className='max-w-[1200px] mx-auto flex items-center'>
     <div className='w-[100px] '>
         <img src="images/logo.png" className='w-full' alt="" />
