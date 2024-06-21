@@ -30,7 +30,7 @@ export default function Categories() {
             <div className='grid grid-cols-4 gap-4 mt-4'>
                 {categories.map((category, index) => (
                     <div key={index} className='text-center'>
-                        <img src={category.image} alt={category.path} className='w-full h-auto' />
+                        <img src={`./images/${category.image}`} alt={category.path} className='w-full h-auto' />
                         <p>{category.path.replace(/-/g, ' ')}</p>
                     </div>
                 ))}
