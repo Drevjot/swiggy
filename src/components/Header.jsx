@@ -17,25 +17,30 @@ export default function Header() {
    const links=[
     {
         icon :  <IoIosSearch />,
-        name : "Search"
+        name : "Search",
+        link: 'http://google.com'
     
     },
     {
         icon :   <CiDiscount1  />,
         name : "Offers",
-        super : "new"
+        super : "new",
+        link: ''
     },
     {
         icon :  <GiHelp />,
-        name : "Help"
+        name : "Help",
+        link: ''
     },
     {
         icon :  <IoPersonSharp />,
-        name : "Sign in"
+        name : "Sign in",
+        link: ''
     },
     {
         icon : <FaCartShopping />,
-        name : "Cart"
+        name : "Cart",
+        link: ''
     }
 
     
@@ -71,11 +76,12 @@ export default function Header() {
             {
                 links.map(
                     (links,index)=>{
-                        return <li key={index} className='flex hover:text-[#fc8019] items-center gap-2  cursor-pointer'>
+                        return <a href={links.link}><li key={index} className='flex hover:text-[#fc8019] items-center gap-2  cursor-pointer'>
                             {links.icon}
                             {links.name}
                            <sup>{links.super}</sup> 
                         </li>
+                        </a>
                     }
                 )
             }
