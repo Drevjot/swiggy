@@ -7,7 +7,8 @@ import { IoPersonSharp } from "react-icons/io5";
 import { FaCartShopping } from "react-icons/fa6";
 export default function Header() {
     const [toggle,setToggle]= useState(false);
-   const showsidemenu = () => {
+   const showsidemenu = (e) => {
+    e.preventDefault();
     console.log('hi');
     setToggle(true);
    }
@@ -56,10 +57,25 @@ export default function Header() {
 
         <div onClick={(e)=>{
             e.stopPropagation();
-        }} className='w-[500px] bg-white h-full absolute duration-[450ms]'  
+        }} className='w-[500px] bg-white h-full p-3 absolute duration-[450ms]'  
         style={{
-            left:toggle? '0%' : '-100%'
-        }}></div>
+            right:toggle? '0%' : '-100%'
+        }}>
+            <p className='text-[1.5rem] text-slate-500 cursor-pointer' onClick={hidesidemenu}>&#10005;</p>
+            <h2 className='text-2xl mt-[3.5rem] ml-4 font-bold'>Login</h2>
+            <div className='ml-4'>
+                <span className='text-sm'>or </span>
+            <span className='text-sm text-[#fc8019]'>create an account</span>
+            <hr className='w-[40px] mt-4 divide-black'/>
+            <input type="text" className='p-5 border border-1 w-[80%]' placeholder='Phone Number' />
+            <div className='mt-5'>
+                <button className='w-[80%] bg-[#fc8019] p-5 text-white font-bold'>LOGIN</button>
+                <p className='font-bold mt-2 text-[10px]'>
+                    By clicking on Login, I accept the Terms & Conditions & Privacy Policy
+                </p>
+            </div>
+            </div>
+        </div>
     </div>
 <header className='p-[15px] shadow-xl sticky top-0 bg-white z-[99]'>
 <div className='max-w-[1200px] mx-auto flex items-center'>
@@ -76,7 +92,7 @@ export default function Header() {
             {
                 links.map(
                     (links,index)=>{
-                        return <a href={links.link}><li key={index} className='flex hover:text-[#fc8019] items-center gap-2  cursor-pointer'>
+                        return <a href={links.link} ><li key={index} onClick={links.name === 'Sign in' ? showsidemenu : ''} className='flex hover:text-[#fc8019] items-center gap-2  cursor-pointer'>
                             {links.icon}
                             {links.name}
                            <sup>{links.super}</sup> 
