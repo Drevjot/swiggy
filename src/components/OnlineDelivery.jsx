@@ -35,8 +35,13 @@ const OnlineDelivery = () => {
             </div>
             <div className={isTop ? 'fixed top-0 z-[9999999] bg-white w-full left-0' : ''}>
                 <div className='max-w-[1200px] mx-auto flex my-4 gap-3'>
-                    <div className='p-3 rounded-md shadow'>Filter</div>
-                    <div className='p-3 rounded-md shadow'>Sort By</div>
+                    <div className='p-3 rounded-[3rem] border border-1 shadow'>Filter</div>
+                    <div className='p-3 rounded-[3rem] border border-1 shadow'>Sort By</div>
+                    <div className='p-3 rounded-[3rem] border border-1 shadow'>Fast Delivery</div>
+                    <div className='p-3 rounded-[3rem] border border-1 shadow'>New on Swiggy</div>
+                    <div className='p-3 rounded-[3rem] border border-1 shadow'>Ratings 4.0+</div>
+                    <div className='p-3 rounded-[3rem] border border-1 shadow'>Pure Veg</div>
+                    <div className='p-3 rounded-[3rem] border border-1 shadow'>Offers</div>
 
                 </div>
             </div>
