@@ -30,10 +30,10 @@ export default function Categories()
                 <div className='text-[25px] font-bold'>What's on your mind?</div>
                 <div className='flex'>
                     <div className='cursor-pointer flex justify-center items-center w-[30px] h-[30px] bg-[#e2e2e7] rounded-full mx-2  onClick={prevslide}'>
-                        <FaArrowLeft />
+                        <FaArrowLeft onClick={prevslide} />
                     </div>
                     <div className='cursor-pointer flex justify-center items-center w-[30px] h-[30px] bg-[#e2e2e7] rounded-full mx-2  onClick={nextslide}'>
-                        <FaArrowRight />
+                        <FaArrowRight onClick={nextslide}/>
                     </div>
                 </div>
             </div>
