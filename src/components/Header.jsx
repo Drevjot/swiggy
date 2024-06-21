@@ -57,7 +57,7 @@ export default function Header() {
 
         <div onClick={(e)=>{
             e.stopPropagation();
-        }} className='w-[500px] bg-white h-full p-3 absolute duration-[450ms]'  
+        }} className='w-[500px] bg-white h-full p-5 absolute duration-[450ms]'  
         style={{
             right:toggle? '0%' : '-100%'
         }}>
@@ -66,8 +66,9 @@ export default function Header() {
             <div className='ml-4'>
                 <span className='text-sm'>or </span>
             <span className='text-sm text-[#fc8019]'>create an account</span>
-            <hr className='w-[40px] mt-4 mb-2 divide-black'/>
+            <hr className='w-[40px] mt-4 mb-6 divide-black'/>
             <input type="text" className='p-5 border border-1 w-[80%]' placeholder='Phone Number' />
+            <img src='./images/swiggymenu.avif' className='w-24 absolute top-[4rem] right-[8rem]'/>
             <div className='mt-5'>
                 <button className='w-[80%] bg-[#fc8019] p-5 text-white font-bold'>LOGIN</button>
                 <p className='font-bold mt-2 text-[10px]'>
