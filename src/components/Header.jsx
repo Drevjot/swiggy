@@ -66,7 +66,7 @@ export default function Header() {
             <div className='ml-4'>
                 <span className='text-sm'>or </span>
             <span className='text-sm text-[#fc8019]'>create an account</span>
-            <hr className='w-[40px] mt-4 divide-black'/>
+            <hr className='w-[40px] mt-4 mb-2 divide-black'/>
             <input type="text" className='p-5 border border-1 w-[80%]' placeholder='Phone Number' />
             <div className='mt-5'>
                 <button className='w-[80%] bg-[#fc8019] p-5 text-white font-bold'>LOGIN</button>
